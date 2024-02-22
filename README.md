@@ -66,4 +66,25 @@ Install commands:
 - php artisan migrate:fresh --seed
 - php artisan serve
 ```
+Use Postman to test the API.
 
+## Test functionality
+### Login ###
+**URL:** https://domain/api/login
+**Method:** POST
+**Insert email and password:** Body tab => x-www-form-urlencode
+**Press Enter to get the Bearer token**
+**For future requests add this token:**
+Authorization tab: Type => Bearer Token; Insert token.
+
+**Returns all certificates:**
+
+**Adding a certificate:**
+
+**Returns certificate details:**
+
+**Editing a certificate:**
+
+**Updates a certificate**
+
+**Deletes a certificate**
