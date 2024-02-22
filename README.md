@@ -22,21 +22,8 @@ Laravel 10 API Crud is a basic RESTful API crud app built with Laravel 10 and Pa
 6. Updates a certificate
 7. Deletes a certificate
 
-  ## Table structure:
-  **certificate_details**
-  - id;
-  - expiry_date;
-  - certificate_type;
-  - pci_owner;
-  - certificate_name;
-  - equipment;
-  - provider;
-  - contact_name;
-  - contact_phone;
-  - email_contact;
-  - generated_by;
-  - about_certificate;
-  - remarks.
+## Table structure:
+**certificate_details:** id, expiry_date, certificate_type, pci_owner, certificate_name, equipment, provider, contact_name, contact_phone, email_contact, generated_by, about_certificate and remarks.
 
 ## Routes
 **Returns all certificates:**
