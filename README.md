@@ -59,9 +59,11 @@ Route::delete('/certificate/{certificate_id}', [CertificateController::class,'de
 
 ## Install
 Install commands:
-``- git clone https://github.com/nhrrob/laravel-8-api-crud.git 
+```
+- git clone https://github.com/nhrrob/laravel-8-api-crud.git 
 - composer update
 - add .env and update database settings
 - php artisan migrate:fresh --seed
-- php artisan serve``
+- php artisan serve
+```
 
