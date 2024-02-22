@@ -39,16 +39,16 @@ Laravel 10 API Crud is a basic RESTful API crud app built with Laravel 10 and Pa
   - remarks.
 
 ## Routes
-**Returns all certificates**
+**Returns all certificates:**
 Route::get('/', [CertificateController::class,'index'])->name('certificates.index');
 
-**Adding a certificate**
+**Adding a certificate:**
 Route::get('/certificate/create', [CertificateController::class . 'create'])->name('certificate.create');
 
-**Returns certificate details**
+**Returns certificate details:**
 Route::get('/certificate/{certificate_id}', [CertificateController::class,'show'])->name('certificate.show');
 
-**Editing a certificate**
+**Editing a certificate:**
 Route::get('/certificate/{certificate_id}/edit', [CertificateController::class,'edit'])->name('certificate.edit');
 
 **Updates a certificate**
