@@ -46,13 +46,13 @@ Route::get('/', [CertificateController::class,'index'])->name('certificates.inde
 Route::get('/certificate/create', [CertificateController::class . 'create'])->name('certificate.create');
 
 **Returns certificate details**
-Route::get('/certificate/{licence_id}', [CertificateController::class,'show'])->name('certificate.show');
+Route::get('/certificate/{certificate_id}', [CertificateController::class,'show'])->name('certificate.show');
 
 **Editing a certificate**
-Route::get('/certificate/{licence_id}/edit', [CertificateController::class,'edit'])->name('certificate.edit');
+Route::get('/certificate/{certificate_id}/edit', [CertificateController::class,'edit'])->name('certificate.edit');
 
 **Updates a certificate**
-Route::put('/certificate/{licence_id}', [CertificateController::class,'update'])->name('certificate.update');
+Route::put('/certificate/{certificate_id}', [CertificateController::class,'update'])->name('certificate.update');
 
 **Deletes a certificate**
-Route::delete('/certificate/{licence_id}', [CertificateController::class,'destroy'])->name('certificate.destroy');
+Route::delete('/certificate/{certificate_id}', [CertificateController::class,'destroy'])->name('certificate.destroy');
