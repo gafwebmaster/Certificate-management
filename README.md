@@ -5,11 +5,11 @@ Laravel 10 API Crud is a basic RESTful API crud app built with Laravel 10 and Pa
 - Laravel passport package
 - Authentication using Passport
 - Logout to remove old tokens
-- Create a licence.
-- List products.
-- Update product.
-- Delete product
-- Search By Title
+- Create a licence
+- List licences
+- Update licence
+- Delete licence
+- Search licence by licence name
 - Pagination link with JSON data
 
 >  ## Project requests:
