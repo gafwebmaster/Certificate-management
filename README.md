@@ -79,3 +79,16 @@ http://localhost:81/api/certificate/1
 **Updates a certificate**
 
 **Deletes a certificate**
+
+## Security practices
+1. .env file is not tracked in Git;
+2. Laravel project, first and third-party packages up to date always to the latest version;
+3. Debug messages are disabled in production;
+4. Sensitive information is not sent to the error monitoring tools;
+5. Parts of the app are restricted by policies;
+6. Forms are protected from cross-site request forgery (CSRF);
+7. All inputs are validated;
+8. Careful with the uploaded files;
+9. Payloads are encrypted;
+10. Are written tests for the security risks;
+11. Regular security audits are done.
