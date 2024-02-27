@@ -26,28 +26,28 @@ Laravel 10 API Crud is a basic RESTful API crud app built with Laravel 10 and Pa
 **certificate_details:** id, expiry_date, certificate_type, pci_owner, certificate_name, equipment, provider, contact_name, contact_phone, email_contact, generated_by, about_certificate and remarks.
 
 ## Routes
-**Returns all certificates:**
-Route::get('/certificate/', [CertificateController::class,'index'])->name('certificates.index');
+**1.Returns all certificates:**
+Route::get('/certificate/see_all', [CertificateController::class,'show']);
 
-**Adding a certificate:**
-Route::get('/certificate/create', [CertificateController::class . 'create'])->name('certificate.create');
+**2.Adding a certificate:**
+Route::post('/certificate/create', [CertificateController::class, 'create']);
 
-**Returns certificate details:**
-Route::get('/certificate/{certificate_id}', [CertificateController::class,'show'])->name('certificate.show');
+**3.Returns certificate details:**
+Route::get('/certificate/{id?}', [CertificateController::class,'show']);
 
-**Editing a certificate:**
-Route::get('/certificate/{certificate_id}/edit', [CertificateController::class,'edit'])->name('certificate.edit');
+**4.Updates a certificate**
+Route::put('/certificate/update/{id}', [CertificateController::class,'update']);
 
-**Updates a certificate**
-Route::put('/certificate/{certificate_id}', [CertificateController::class,'update'])->name('certificate.update');
+**5.Deletes a certificate**
+Route::delete('/certificate/delete/{id}', [CertificateController::class,'destroy']);
 
-**Deletes a certificate**
-Route::delete('/certificate/{certificate_id}', [CertificateController::class,'destroy'])->name('certificate.destroy');
+**6.Search for a certificate:**
+Route::get('/certificate/search/{word}', [CertificateController::class, 'search']);
 
 ## Install
 Install commands:
 ```
-- git clone https://github.com/nhrrob/laravel-8-api-crud.git 
+- git clone https://github.com/gafwebmaster/Certificate-management
 - composer update
 - add .env and update database settings
 - php artisan migrate:fresh --seed
