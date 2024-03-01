@@ -80,6 +80,18 @@ http://localhost:81/api/certificate/1
 
 **Deletes a certificate**
 
+## Testing
+- test protected route by Sanctum, been logged out;
+- try to login with wrong: user, password, token;
+- loghin with rights credentials;
+- See all certificates;
+- See details for one certificate (by it's id);
+- Insert certificate;
+- Update certificate;
+- Delete certificate;
+- Search certificate (by it's name);
+- Make "Log out" then try to access protected route by Sanctum;
+
 ## Security practices
 1. .env file is not tracked in Git;
 2. Laravel project, first and third-party packages up to date always to the latest version;
