@@ -55,7 +55,7 @@ Install commands:
 ```
 Use Postman to test the API.
 
-## Test functionality
+## Manual test functionality
 ### Login ###
 **URL:** https://domain/api/login
 **Method:** POST
@@ -80,7 +80,7 @@ http://localhost:81/api/certificate/1
 
 **Deletes a certificate**
 
-## Testing
+## Feature testing
 - test protected route by Sanctum, been logged out;
 - try to login with wrong: user, password, token;
 - loghin with rights credentials;
@@ -92,7 +92,7 @@ http://localhost:81/api/certificate/1
 - Search certificate (by it's name);
 - Make "Log out" then try to access protected route by Sanctum;
 
-## Security practices
+## Best security practices present on that project
 1. .env file is not tracked in Git;
 2. Laravel project, first and third-party packages up to date always to the latest version;
 3. Debug messages are disabled in production;
