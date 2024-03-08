@@ -13,6 +13,18 @@ return new class extends Migration
     {
         Schema::create('certificates', function (Blueprint $table) {
             $table->id();
+            $table->dateTime('expiry_date');
+            $table->string('certificate_type');
+            $table->string('pci_owner');
+            $table->string('certificate_name');
+            $table->string('equipment');
+            $table->string('provider');
+            $table->string('contact_name');
+            $table->string('contact_phone');
+            $table->string('email_contact');
+            $table->string('generated_by');
+            $table->string('about_certificate');
+            $table->string('remarks');
             $table->timestamps();
         });
     }
