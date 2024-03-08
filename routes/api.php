@@ -1,8 +1,10 @@
 <?php
 
+use GuzzleHttp\Middleware;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CertificateController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,24 +17,32 @@ use App\Http\Controllers\CertificateController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+// 404
+Route::get('/404', [CertificateController::class,'error']);
+
+//Login and recieve the user token in order to have access to the below routes
+Route::post('/certificate/login_for_receiving_a_token', [UserController::class,'generateTocken']);
+
+// Revoke the token that was used to authenticate the current request
+Route::post('/certificate/logout', [UserController::class,'makeLogout']);
+
+// Sanctum protected routes
+Route::group(['middleware'=>'auth:sanctum'], function(){
+    // 1.Returns all certificates:
+    Route::get('/certificate/see_all', [CertificateController::class,'show']);
+
+    // 2.Adding a certificate:
+    Route::post('/certificate/create', [CertificateController::class, 'create']);
+
+    // 3.Returns certificate details:
+    Route::get('/certificate/{id?}', [CertificateController::class,'show']);
+
+    // 4.Updates a certificate
+    Route::put('/certificate/update/{id}', [CertificateController::class,'update']);
+
+    // 5.Deletes a certificate
+    Route::delete('/certificate/delete/{id}', [CertificateController::class,'delete']);
+
+    // 6.Search for a certificate:
+    Route::get('/certificate/search/{name}', [CertificateController::class, 'search'])->middleware(['auth:sanctum', 'ability:check-status']);
 });
-
-//Returns all certificates:
-Route::get('/', [CertificateController::class,'index'])->name('certificates.all');
-
-//Adding a certificate:
-Route::get('/certificate/create', [CertificateController::class . 'create'])->name('certificate.create');
-
-//Returns certificate details:
-Route::get('/certificate/{certificate_id}', [CertificateController::class,'show'])->name('certificate.show');
-
-//Editing a certificate:
-Route::get('/certificate/{certificate_id}/edit', [CertificateController::class,'edit'])->name('certificate.edit');
-
-//Updates a certificate
-Route::put('/certificate/{certificate_id}', [CertificateController::class,'update'])->name('certificate.update');
-
-//Deletes a certificate
-Route::delete('/certificate/{certificate_id}', [CertificateController::class,'destroy'])->name('certificate.destroy');
