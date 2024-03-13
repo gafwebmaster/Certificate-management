@@ -48,38 +48,63 @@ Use Postman to test the API.
 ### Login ###
 **URL:** https://domain/api/login
 **Method:** POST
-**Insert email and password:** Body tab => x-www-form-urlencode
+**Insert email and password:** 
+```
+{
+"email":"gafwebmaster@gmail.com",
+"password": "password"
+}
+```
 **Press Enter to get the Bearer token**
-**For future requests add this token:**
-Authorization tab: Type => Bearer Token; Insert token.
+**For future requests add this token**
+**Authorization tab:** Type => Bearer Token; Insert token.
 
 **Returns all certificates:**
-http://localhost:81/api
+**URL:** http://localhost:81/api
+**Method:** GET
 
 **Returns specified certificate**
-http://localhost:81/api/certificate/1
+**URL:** http://localhost:81/api/certificate/1
+**Method:** GET
 
 **Adding a certificate:**
+```
+{
+"expiry_date": "2024-02-24 15:30:24",
+"certificate_type": "JB0gyITmOM",
+"pci_owner": "LUDq1izb4T",
+"certificate_name": "rU21nV3zXO",
+"equipment": "AE3isSGmzv",
+"provider": "sjSHGQPsbF",
+"contact_name": "Florin Nou",
+"contact_phone": "8l0fGr3nNG",
+"email_contact": "jFH1PcawYtfj@gmail.com",
+"generated_by": "v94w81CMzJ",
+"about_certificate": "NVKujpPwo8",
+"remarks": "zBUN6ttZ5l"
+}
+```
 
 **Returns certificate details:**
 
-**Editing a certificate:**
 
 **Updates a certificate**
+```
+```
 
 **Deletes a certificate**
 
 ## Feature testing
 - test protected route by Sanctum, been logged out;
-- try to login with wrong: user, password, token;
-- loghin with rights credentials;
+- try to log in with the wrong: user, password, or token;
+- login with rights credentials;
 - See all certificates;
 - See details for one certificate (by it's id);
 - Insert certificate;
 - Update certificate;
 - Delete certificate;
 - Search certificate (by it's name);
-- Make "Log out" then try to access protected route by Sanctum;
+- Make "Log out" then try to access the protected route by Sanctum;
 
 ## Best security practices present on that project
 1. .env file is not tracked in Git;
