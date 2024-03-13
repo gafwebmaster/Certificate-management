@@ -57,17 +57,17 @@ Use Postman to test the API.
 ```
 **Press Enter to get the Bearer token** \
 **For future requests add this token** \
-**Authorization tab:** Type => Bearer Token; Insert token.
+**Authorization tab:** Type => Bearer Token; Insert token. \
 
-**Returns all certificates:**
-**URL:** http://localhost:81/api
-**Method:** GET
+**Returns all certificates:** \
+**URL:** http://localhost:81/api \
+**Method:** GET \
 
-**Returns specified certificate**
-**URL:** http://localhost:81/api/certificate/1
-**Method:** GET
+**Returns specified certificate** \
+**URL:** http://localhost:81/api/certificate/1 \
+**Method:** GET \
 
-**Adding a certificate:**
+**Adding a certificate:** \
 **Method:** POST
 ```
 {
@@ -86,12 +86,12 @@ Use Postman to test the API.
 }
 ```
 
-**Returns certificate details by its id:**
-**URL:** http://localhost:81/api/certificate/2
+**Returns certificate details by its id:** \
+**URL:** http://localhost:81/api/certificate/2 \
 **Method:** GET
 
-**Updates a certificate**
-**URL:** http://localhost:81/api/certificate/update/8
+**Updates a certificate** \
+**URL:** http://localhost:81/api/certificate/update/8 \
 **Method:** PUT
 ```
 {
@@ -111,9 +111,9 @@ Use Postman to test the API.
 }
 ```
 
-**Deletes a certificate**
-**URL:** http://localhost:81/api/certificate/delete/1
-**Method:** DELETE
+**Deletes a certificate** \
+**URL:** http://localhost:81/api/certificate/delete/1 \
+**Method:** DELETE \
 
 ## Feature testing
 - test protected route by Sanctum, been logged out;
@@ -128,12 +128,10 @@ Use Postman to test the API.
 - Make "Log out" then try to access the protected route by Sanctum;
 
 ## Best security practices present on that project
-1. .env file is not tracked in Git;
-2. Laravel project, first and third-party packages up to date always to the latest version;
-3. Debug messages are disabled in production;
-4. Sensitive information is not sent to the error monitoring tools;
-5. Parts of the app are restricted by policies;
-6. Forms are protected from cross-site request forgery (CSRF);
+- .env file is not tracked in Git;
+- Laravel project, first and third-party packages up to date always to the latest version;
+- Debug messages are disabled in production;
+- Parts of the app are restricted by Sanctum.
 7. All inputs are validated;
 8. Careful with the uploaded files;
 9. Payloads are encrypted;
