@@ -58,7 +58,7 @@ Use Postman to test the API.
 ```
 Press Enter to get the Bearer token \
 **For future requests add this token** \
-**Authorization tab:** Type => Bearer Token; Insert token. \
+**Authorization tab:** Type => Bearer Token; Insert token. 
 
 ### 2. Returns all certificates: ###
 **URL:** http://localhost:81/api \
@@ -114,7 +114,7 @@ Press Enter to get the Bearer token \
 
 ### 7. Deletes a certificate ###
 **URL:** http://localhost:81/api/certificate/delete/1 \
-**Method:** DELETE \
+**Method:** DELETE 
 
 ## Feature testing
 - test protected route by Sanctum, been logged out;
@@ -133,8 +133,8 @@ Press Enter to get the Bearer token \
 - Laravel project, first and third-party packages up to date always to the latest version;
 - Debug messages are disabled in production;
 - Parts of the app are restricted by Sanctum.
-7. All inputs are validated;
-8. Careful with the uploaded files;
-9. Payloads are encrypted;
-10. Are written tests for the security risks;
-11. Regular security audits are done.
+- All inputs are validated;
+- Careful with the uploaded files;
+- Payloads are encrypted;
+- Are written tests for the security risks;
+- Regular security audits are done.
