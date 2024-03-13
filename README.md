@@ -55,8 +55,8 @@ Use Postman to test the API.
 "password": "password"
 }
 ```
-**Press Enter to get the Bearer token**
-**For future requests add this token**
+**Press Enter to get the Bearer token** \
+**For future requests add this token** \
 **Authorization tab:** Type => Bearer Token; Insert token.
 
 **Returns all certificates:**
