@@ -46,8 +46,8 @@ Use Postman to test the API.
 
 ## Manual test functionality
 ### Login ###
-**URL:** https://domain/api/login 
-**Method:** POST 
+**URL:** https://domain/api/login \
+**Method:** POST \
 **Insert email and password:** 
 ```
 {
