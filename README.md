@@ -12,7 +12,8 @@ Laravel 10 API Crud is a basic RESTful API crud app built with Laravel 10 and Pa
 - Search certificate by id
 
 ## Table structure:
-**certificate_details:** id, expiry_date, certificate_type, pci_owner, certificate_name, equipment, provider, contact_name, contact_phone, email_contact, generated_by, about_certificate and remarks.
+**Table name:** certificate_details; \
+**Table fields:** id, expiry_date, certificate_type, pci_owner, certificate_name, equipment, provider, contact_name, contact_phone, email_contact, generated_by, about_certificate and remarks.
 
 ## Routes
 **1. Returns all certificates:**
@@ -34,7 +35,7 @@ Route::delete('/certificate/delete/{id}', [CertificateController::class,'destroy
 Route::get('/certificate/search/{word}', [CertificateController::class, 'search']);
 
 ## Install
-Install commands:
+Commands:
 ```
 - git clone https://github.com/gafwebmaster/Certificate-management
 - composer update
