@@ -62,11 +62,11 @@ Press Enter to get the Bearer token \
 
 ### 2. Returns all certificates: ###
 **URL:** http://localhost:81/api \
-**Method:** GET \
+**Method:** GET 
 
 ### 3. Returns specified certificate ###
 **URL:** http://localhost:81/api/certificate/1 \
-**Method:** GET \
+**Method:** GET 
 
 ### 4. Adding a certificate: ###
 **Method:** POST
