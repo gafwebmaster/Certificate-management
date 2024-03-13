@@ -58,7 +58,7 @@ Use Postman to test the API.
 ```
 Press Enter to get the Bearer token \
 **For future requests add this token** \
-**Authorization tab:** Type => Bearer Token; Insert token. 
+**Authorization tab:** Type => Bearer Token; insert the token. 
 
 ### 2. Returns all certificates: ###
 **URL:** http://localhost:81/api \
