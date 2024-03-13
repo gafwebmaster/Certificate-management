@@ -46,7 +46,7 @@ Commands:
 Use Postman to test the API.
 
 ## Manual test functionality
-### Login ###
+### 1. Login ###
 **URL:** https://domain/api/login \
 **Method:** POST \
 **Insert email and password:** 
@@ -60,15 +60,15 @@ Press Enter to get the Bearer token \
 **For future requests add this token** \
 **Authorization tab:** Type => Bearer Token; Insert token. \
 
-### Returns all certificates: ###
+###2. Returns all certificates: ###
 **URL:** http://localhost:81/api \
 **Method:** GET \
 
-### Returns specified certificate ###
+###3. Returns specified certificate ###
 **URL:** http://localhost:81/api/certificate/1 \
 **Method:** GET \
 
-### Adding a certificate: ###
+###4. Adding a certificate: ###
 **Method:** POST
 ```
 {
@@ -87,11 +87,11 @@ Press Enter to get the Bearer token \
 }
 ```
 
-### Returns certificate details by its id: ###
+###5. Returns certificate details by its id: ###
 **URL:** http://localhost:81/api/certificate/2 \
 **Method:** GET
 
-### Updates a certificate ###
+###6. Updates a certificate ###
 **URL:** http://localhost:81/api/certificate/update/8 \
 **Method:** PUT
 ```
@@ -112,7 +112,7 @@ Press Enter to get the Bearer token \
 }
 ```
 
-### Deletes a certificate ###
+###7. Deletes a certificate ###
 **URL:** http://localhost:81/api/certificate/delete/1 \
 **Method:** DELETE \
 
