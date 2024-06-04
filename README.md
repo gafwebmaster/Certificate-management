@@ -131,10 +131,6 @@ Press Enter to get the Bearer token \
 ## Best security practices present on that project
 - .env file is not tracked in Git;
 - Laravel project, first and third-party packages up to date always to the latest version;
-- Debug messages are disabled in production;
 - Parts of the app are restricted by Sanctum.
 - All inputs are validated;
-- Careful with the uploaded files;
-- Payloads are encrypted;
 - Are written tests for the security risks;
-- Regular security audits are done.
