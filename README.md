@@ -1,5 +1,5 @@
 # Certificate-management
-Laravel 10 API Crud is a basic RESTful API crud app built with Laravel 10 and Passport. In this project, a rest API was created for managing certificate crud operations.
+Laravel 10 API Crud is a basic RESTful API crud app built with Laravel 10. In this project, a rest API was created for managing certificate crud operations.
 
 ## Features (API) include:
 - Authentication using Sanctum
