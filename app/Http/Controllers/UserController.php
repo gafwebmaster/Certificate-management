@@ -38,6 +38,11 @@ class UserController extends Controller
     }
 
     public function makeLogout(Request $request){
-        $request->user()->currentAccessToken()->delete();
+        $result = $request->user()->currentAccessToken()->delete();
+        if($result){
+            return ["Result"=>"Data has been saved"];
+        } else {
+            return ["Result"=>"Error"];
+        }
     }
 }
