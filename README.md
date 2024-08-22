@@ -61,11 +61,11 @@ Press Enter to get the Bearer token \
 **Authorization tab:** Type => Bearer Token; insert the token. 
 
 ### 2. Returns all certificates: ###
-**URL:** http://localhost:81/api \
+**URL:** https://www.api-management.gabrieldeveloper.com/api \
 **Method:** GET 
 
 ### 3. Returns specified certificate ###
-**URL:** http://localhost:81/api/certificate/1 \
+**URL:** https://www.api-management.gabrieldeveloper.com/api/certificate/1 \
 **Method:** GET 
 
 ### 4. Adding a certificate: ###
@@ -88,11 +88,11 @@ Press Enter to get the Bearer token \
 ```
 
 ### 5. Returns certificate details by its id: ###
-**URL:** http://localhost:81/api/certificate/2 \
+**URL:** https://www.api-management.gabrieldeveloper.com/api/certificate/2 \
 **Method:** GET
 
 ### 6. Updates a certificate ###
-**URL:** http://localhost:81/api/certificate/update/8 \
+**URL:** https://www.api-management.gabrieldeveloper.com/api/certificate/update/8 \
 **Method:** PUT
 ```
 {
@@ -113,24 +113,11 @@ Press Enter to get the Bearer token \
 ```
 
 ### 7. Deletes a certificate ###
-**URL:** http://localhost:81/api/certificate/delete/1 \
+**URL:** https://www.api-management.gabrieldeveloper.com/api/certificate/delete/1 \
 **Method:** DELETE 
-
-## Feature testing
-- test protected route by Sanctum, been logged out;
-- try to log in with the wrong: user, password, or token;
-- login with rights credentials;
-- See all certificates;
-- See details for one certificate (by it's id);
-- Insert certificate;
-- Update certificate;
-- Delete certificate;
-- Search certificate (by it's name);
-- Make "Log out" then try to access the protected route by Sanctum;
 
 ## Best security practices present on that project
 - .env file is not tracked in Git;
 - Laravel project, first and third-party packages up to date always to the latest version;
 - Parts of the app are restricted by Sanctum.
 - All inputs are validated;
-- Are written tests for the security risks;
